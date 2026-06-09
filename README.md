@@ -2,7 +2,7 @@
 [![Actions Status](https://github.com/jeronymo42/qa-auto-engineer-python-project-241/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/jeronymo42/qa-auto-engineer-python-project-241/actions)
 
 ### Проект: Вычислитель отличий (QA Python)
-Проект показывает отлчие между 2 файлами
+Проект показывает отлbчие между 2 файлами конфигураций
 
 
 #### Установка

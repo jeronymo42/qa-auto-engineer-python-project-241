@@ -1,6 +1,14 @@
+from gendiff.general.constants import DESCRIPTION
+import argparse
+
 
 def main():
-    print("Hello from gendiff!")
+    parser = argparse.ArgumentParser(prog="gendiff", description=DESCRIPTION)
+
+    parser.add_argument("first_file")
+    parser.add_argument("second_file")
+
+    parser.parse_args()
 
 
 if __name__ == "__main__":
