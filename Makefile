@@ -1,3 +1,5 @@
+test:	build package-install
+	
 install:
 	uv sync
 
