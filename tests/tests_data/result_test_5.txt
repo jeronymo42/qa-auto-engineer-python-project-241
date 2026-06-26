@@ -1,0 +1,2 @@
+Property 'success' was added with value: hexlet.io
+Property 'test' was removed

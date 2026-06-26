@@ -67,3 +67,35 @@ def test_generate_diff_empty_yaml():
         )
         == open(os.path.join(TEST_DATA_DIR, "result_test_3.txt")).read()
     )
+
+
+# plain tests
+def test_generate_diff_general_plain():
+    assert (
+        dp(
+            os.path.join(TEST_DATA_DIR, "file1.json"),
+            os.path.join(TEST_DATA_DIR, "file2.json"),
+            styler="plain",
+        )
+        == open(os.path.join(TEST_DATA_DIR, "result_test_4.txt")).read()
+    )
+
+def test_generate_diff_one_line_plain():
+    assert (
+        dp(
+            os.path.join(TEST_DATA_DIR, "file_one_line_1.json"),
+            os.path.join(TEST_DATA_DIR, "file_one_line_2.json"),
+            styler="plain",
+        )
+        == open(os.path.join(TEST_DATA_DIR, "result_test_5.txt")).read()
+    )
+
+def test_generate_diff_empty_plain():
+    assert (
+        dp(
+            os.path.join(TEST_DATA_DIR, "file_empty_1.json"),
+            os.path.join(TEST_DATA_DIR, "file_empty_2.json"),
+            styler="plain",
+        )
+        == open(os.path.join(TEST_DATA_DIR, "result_test_6.txt")).read()
+    )
