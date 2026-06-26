@@ -13,6 +13,10 @@
 - для отражаение справки необходимо ввести gendiff -h
 
 
+#### Пример работы gendiff
+[![asciicast](https://asciinema.org/a/RPKdGkRPwVCwYIfK.svg)](https://asciinema.org/a/RPKdGkRPwVCwYIfK)
+
+
 ### SonarQube:
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=jeronymo42_qa-auto-engineer-python-project-241&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=jeronymo42_qa-auto-engineer-python-project-241)
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=jeronymo42_qa-auto-engineer-python-project-241&metric=bugs)](https://sonarcloud.io/summary/new_code?id=jeronymo42_qa-auto-engineer-python-project-241)
