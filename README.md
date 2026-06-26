@@ -28,3 +28,4 @@
 [![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=jeronymo42_qa-auto-engineer-python-project-241&metric=sqale_index)](https://sonarcloud.io/summary/new_code?id=jeronymo42_qa-auto-engineer-python-project-241)
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=jeronymo42_qa-auto-engineer-python-project-241&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=jeronymo42_qa-auto-engineer-python-project-241)
 [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=jeronymo42_qa-auto-engineer-python-project-241&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=jeronymo42_qa-auto-engineer-python-project-241)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=jeronymo42_qa-auto-engineer-python-project-241&metric=coverage)](https://sonarcloud.io/summary/new_code?id=jeronymo42_qa-auto-engineer-python-project-241)
