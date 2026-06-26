@@ -1,6 +1,6 @@
 from gendiff.general.constants import DESCRIPTION
 
-from gendiff.general.file_helper import open_file
+from gendiff.general.file_helper import generate_diff
 import argparse
 
 
@@ -13,10 +13,8 @@ def main():
     parser.add_argument("second_file", type=str)
 
     args = parser.parse_args()
-    file1 = open_file(args.first_file)
-    file2 = open_file(args.second_file)
 
-    print(file1, file2)
+    print(generate_diff(args.first_file, args.second_file))
 
 
 if __name__ == "__main__":
