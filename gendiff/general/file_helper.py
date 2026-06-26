@@ -32,7 +32,8 @@ def generate_diff(path_1: str, path_2: str) -> str:
     if isinstance(file_1, dict) and isinstance(file_2, dict):
         result_json = {**file_1, **file_2}
         sorted_data = {
-            key: return_str_key(result_json, key) for key in sorted(result_json.keys())
+            key: return_str_key(result_json, key)
+            for key in sorted(result_json.keys())
         }
         result = "{\n"
         for key in sorted_data.keys():
