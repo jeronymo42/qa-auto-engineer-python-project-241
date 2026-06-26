@@ -1,3 +1,3 @@
-from gendiff.general.file_helper import generate_diff
+from gendiff.general.diff_parser import diff_parser as dp
 
-__all__ = ["generate_diff"]
+__all__ = ["dp"]
