@@ -17,10 +17,13 @@ def open_yaml(path: str) -> dict:
 
 
 def open_file(path: str) -> dict | str:
-    if path.endswith(".json"):
-        return open_json(path)
-    if path.endswith(".txt"):
-        return open_txt(path)
+    openning_func = {"json": open_json,
+                     "yml": open_yaml,
+                      "yaml": open_yaml}
+
+    extension = path.split(".")[-1]
+    if extension in openning_func:
+        return openning_func[extension](path)
     return ""
 
 
@@ -34,6 +37,10 @@ def return_str_key(json: dict, key: str) -> str:
 def generate_diff(path_1: str, path_2: str) -> str:
     file_1 = open_file(path_1)
     file_2 = open_file(path_2)
+    
+    if not file_1 and not file_2:
+        return "{\n}"
+    
     if isinstance(file_1, dict) and isinstance(file_2, dict):
         result_json = {**file_1, **file_2}
         sorted_data = {
