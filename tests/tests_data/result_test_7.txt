@@ -1,0 +1,1 @@
+{"follow": {"change": "no_key", "value": false}, "host": {"change": "same", "value": "hexlet.io"}, "proxy": {"change": "no_key", "value": "123.234.53.22"}, "timeout": {"change": "old_value", "old_value": "50", "new_value": "20"}, "verbose": {"change": "new_key", "value": true}}

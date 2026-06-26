@@ -1,0 +1,1 @@
+{"success": {"change": "new_key", "value": "hexlet.io"}, "test": {"change": "no_key", "value": "hexlet.io"}}
