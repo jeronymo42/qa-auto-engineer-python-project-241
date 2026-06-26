@@ -1,5 +1,3 @@
-test:	build package-install
-	
 install:
 	uv sync
 
@@ -19,3 +17,11 @@ lint:
 
 format:
 	uv run ruff format
+
+test:
+	uv run pytest
+
+test-coverage:
+	uv run pytest --cov=gendiff --cov-report=xml
+
+test-build:	build package-install
