@@ -1,6 +1,6 @@
 from typing import Callable
 
-from gendiff.formatting.stylers import plain, stylish
+from gendiff.formatting.stylers import plain, stylish, plain_json
 from gendiff.general.file_helper import open_file
 
 
@@ -15,6 +15,7 @@ def get_styler(styler_name: str) -> Callable:
     stylers = {
         "stylish": stylish,
         "plain": plain,
+        "json": plain_json,
     }
     return stylers.get(styler_name, stylish)
 
