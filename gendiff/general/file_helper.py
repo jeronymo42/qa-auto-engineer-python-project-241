@@ -8,11 +8,6 @@ def open_json(path: str) -> dict:
         return json.load(file)
 
 
-def open_txt(path: str) -> str:
-    with open(path) as file:
-        return file.read()
-
-
 def open_yaml(path: str) -> dict:
     with open(path) as file:
         return yaml.safe_load(file)
