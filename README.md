@@ -13,7 +13,7 @@
 - для отражаение справки необходимо ввести gendiff -h
 
 
-#### Пример работы gendiff
+#### Пример работы gendiff c json
 [![asciicast](https://asciinema.org/a/RPKdGkRPwVCwYIfK.svg)](https://asciinema.org/a/RPKdGkRPwVCwYIfK)
 
 
