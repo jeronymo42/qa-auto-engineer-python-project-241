@@ -17,6 +17,7 @@ def test_generate_diff_general_json():
         == open(os.path.join(TEST_DATA_DIR, "result_test_1.txt")).read()
     )
 
+
 def test_generate_diff_one_line_json():
     assert (
         dp(
@@ -26,6 +27,7 @@ def test_generate_diff_one_line_json():
         == open(os.path.join(TEST_DATA_DIR, "result_test_2.txt")).read()
     )
 
+
 def test_generate_diff_empty_json():
     assert (
         dp(
@@ -34,6 +36,7 @@ def test_generate_diff_empty_json():
         )
         == open(os.path.join(TEST_DATA_DIR, "result_test_3.txt")).read()
     )
+
 
 # yaml tests
 def test_generate_diff_general_yaml():
@@ -45,6 +48,7 @@ def test_generate_diff_general_yaml():
         == open(os.path.join(TEST_DATA_DIR, "result_test_1.txt")).read()
     )
 
+
 def test_generate_diff_one_line_yaml():
     assert (
         dp(
@@ -53,6 +57,7 @@ def test_generate_diff_one_line_yaml():
         )
         == open(os.path.join(TEST_DATA_DIR, "result_test_2.txt")).read()
     )
+
 
 def test_generate_diff_empty_yaml():
     assert (

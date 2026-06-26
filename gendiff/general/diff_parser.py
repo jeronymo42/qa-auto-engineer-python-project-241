@@ -1,6 +1,7 @@
 from typing import Callable
-from gendiff.general.stylers import stylish
+
 from gendiff.general.file_helper import open_file
+from gendiff.general.stylers import stylish
 
 
 def return_str_key(json: dict, key: str) -> str:
@@ -9,13 +10,16 @@ def return_str_key(json: dict, key: str) -> str:
         return str(value).lower()
     return value
 
-def diff_parser(path_1: str, path_2: str, styler: Callable[[str], str] = stylish) -> str:
+
+def diff_parser(
+    path_1: str, path_2: str, styler: Callable[[str], str] = stylish
+) -> str:
     file_1 = open_file(path_1)
     file_2 = open_file(path_2)
 
     if not file_1 and not file_2:
-        return styler('')
-    
+        return styler("")
+
     if isinstance(file_1, dict) and isinstance(file_2, dict):
         result_json = {**file_1, **file_2}
         sorted_data = {
@@ -35,4 +39,4 @@ def diff_parser(path_1: str, path_2: str, styler: Callable[[str], str] = stylish
                     result += f"  - {key}: {sorted_data[key]}\n"
                     result += f"  + {key}: {file_1[key]}\n"
         return styler(result)
-    return styler('')
+    return styler("")
