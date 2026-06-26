@@ -27,7 +27,7 @@ jobs:
           make install
     - name: Run linter and pytest
       run: |
-          make check
+          make test
     - name: Run test coverage
       run: |
           make test-coverage
