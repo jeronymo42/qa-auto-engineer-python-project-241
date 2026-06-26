@@ -6,8 +6,8 @@ build:
 	uv run ruff format
 	uv build
 
-package-install:
-	uv tool install --force dist/*.whl
+package-install: build
+	uv tool install --force $(wildcard dist/*.whl)
 
 gendiff:
 	uv run gendiff
