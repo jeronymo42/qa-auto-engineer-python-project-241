@@ -32,7 +32,7 @@ def test_generate_diff_empty_json():
             os.path.join(TEST_DATA_DIR, "file_empty_1.json"),
             os.path.join(TEST_DATA_DIR, "file_empty_2.json"),
         )
-        == open(os.path.join(TEST_DATA_DIR, "resultn_test_3.txt")).read()
+        == open(os.path.join(TEST_DATA_DIR, "result_test_3.txt")).read()
     )
 
 # yaml tests
