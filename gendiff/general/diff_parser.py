@@ -24,26 +24,21 @@ def diff_parser(path_1: str, path_2: str, styler: str = "stylish") -> str:
     file_1 = open_file(path_1)
     file_2 = open_file(path_2)
 
-    if not file_1 and not file_2:
-        return get_styler(styler)("")
-
-    if isinstance(file_1, dict) and isinstance(file_2, dict):
-        result_json = {**file_1, **file_2}
-        sorted_data = {
-            key: return_str_key(result_json, key)
-            for key in sorted(result_json.keys())
-        }
-        result = []
-        for key in sorted_data.keys():
-            if key not in file_2:
-                result.append(f"no_key:{key}:{sorted_data[key]}")
-            elif key not in file_1:
-                result.append(f"new_key:{key}:{sorted_data[key]}")
+    result_json = {**file_1, **file_2}
+    sorted_data = {
+        key: return_str_key(result_json, key)
+        for key in sorted(result_json.keys())
+    }
+    result = []
+    for key in sorted_data.keys():
+        if key not in file_2:
+            result.append(f"no_key:{key}:{sorted_data[key]}")
+        elif key not in file_1:
+            result.append(f"new_key:{key}:{sorted_data[key]}")
+        else:
+            if sorted_data[key] == file_1[key]:
+                result.append(f"same:{key}:{sorted_data[key]}")
             else:
-                if sorted_data[key] == file_1[key]:
-                    result.append(f"same:{key}:{sorted_data[key]}")
-                else:
-                    result.append(f"old_value:{key}:{file_1[key]}")
-                    result.append(f"new_value:{key}:{file_2[key]}")
-        return get_styler(styler)(result)
-    return get_styler(styler)("")
+                result.append(f"old_value:{key}:{file_1[key]}")
+                result.append(f"new_value:{key}:{file_2[key]}")
+    return get_styler(styler)(result)
