@@ -28,35 +28,27 @@ jobs:
     - name: Run linter and pytest
       run: |
           make test
-    - name: Run test coverage with Cobertura report
+    - name: Run test coverage
       run: |
-        uv run pytest --cov=gendiff --cov-report=term --cov-report=xml:cobertura.xml
-    
-    - name: Upload coverage report
-      uses: actions/upload-artifact@v4
-      with:
-        name: coverage-report
-        path: cobertura.xml
+        uv run pytest --cov=gendiff --cov-report=term --cov-report=xml
 
   sonarqube:
     name: SonarQube
     runs-on: ubuntu-latest
     needs: build  # Важно: ждём завершения build
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           fetch-depth: 0
-      
-      - name: Download coverage report
-        uses: actions/download-artifact@v4
+      - name: Setup Python
+        uses: actions/setup-python@v6
         with:
-          name: coverage-report
-          path: .
-      
+          python-version: ${{ matrix.python }}
+      - name: Install tox and any other packages
+        run: pip install tox
+      - name: Run tox
+        run: tox -e py
       - name: SonarQube Scan
-        uses: SonarSource/sonarqube-scan-action@v8.1.0
+        uses: SonarSource/sonarqube-scan-action@v7
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        with:
-          args: >
-            -Dsonar.python.coverage.reportPaths=cobertura.xml
