@@ -1,13 +1,15 @@
-from gendiff.general.constants import DESCRIPTION
-
-from gendiff.general.file_helper import generate_diff
 import argparse
+
+from gendiff.general.constants import DESCRIPTION
+from gendiff.general.file_helper import generate_diff
 
 
 def main():
     parser = argparse.ArgumentParser(prog="gendiff", description=DESCRIPTION)
 
-    parser.add_argument("-f", "--format", dest="FORMAT", help="set format of output")
+    parser.add_argument(
+        "-f", "--format", dest="FORMAT", help="set format of output"
+    )
 
     parser.add_argument("first_file", type=str)
     parser.add_argument("second_file", type=str)
