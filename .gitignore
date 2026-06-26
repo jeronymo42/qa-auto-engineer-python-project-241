@@ -11,3 +11,7 @@ wheels/
 
 # Asciinema
 *.cast
+
+# Coverage artefacts
+coverage.xml
+.coverage
