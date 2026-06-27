@@ -19,7 +19,7 @@ format:
 	uv run ruff format
 
 test:
-	uv run pytest
+	uv run pytest --cov=gendiff --cov-report=term --cov-report=xml
 
 test-coverage:
 	uv run pytest --cov=gendiff --cov-report=xml

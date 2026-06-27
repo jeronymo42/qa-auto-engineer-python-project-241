@@ -7,13 +7,6 @@ requires-python = ">=3.11"
 dependencies = [
     "pyyaml>=6.0.3",
 ]
-omit = [
-    "*/tests/*",
-    "*/test_*.py",
-    "*/__pycache__/*",
-    "*/venv/*",
-]
-
 
 [dependency-groups]
 dev = [
