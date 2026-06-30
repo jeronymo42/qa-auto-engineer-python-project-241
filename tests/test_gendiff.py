@@ -80,6 +80,7 @@ def test_generate_diff_general_plain():
         == open(os.path.join(TEST_DATA_DIR, "result_test_4.txt")).read()
     )
 
+
 def test_generate_diff_one_line_plain():
     assert (
         dp(
@@ -89,6 +90,7 @@ def test_generate_diff_one_line_plain():
         )
         == open(os.path.join(TEST_DATA_DIR, "result_test_5.txt")).read()
     )
+
 
 def test_generate_diff_empty_plain():
     assert (
@@ -102,7 +104,7 @@ def test_generate_diff_empty_plain():
 
 
 # json tests
-def test_generate_diff_general_json():
+def test_generate_diff_json_format_general_json():
     assert (
         dp(
             os.path.join(TEST_DATA_DIR, "file1.json"),
@@ -113,7 +115,7 @@ def test_generate_diff_general_json():
     )
 
 
-def test_generate_diff_one_line_json():
+def test_generate_diff_json_format_one_line_json():
     assert (
         dp(
             os.path.join(TEST_DATA_DIR, "file_one_line_1.json"),
@@ -124,7 +126,7 @@ def test_generate_diff_one_line_json():
     )
 
 
-def test_generate_diff_empty_json():
+def test_generate_diff_json_format_empty_json():
     assert (
         dp(
             os.path.join(TEST_DATA_DIR, "file_empty_1.json"),
