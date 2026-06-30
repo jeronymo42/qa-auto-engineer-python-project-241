@@ -11,11 +11,22 @@
 - make package-install
 - ввести gendiff
 - для отражаение справки необходимо ввести gendiff -h
+- для изменения формата вывода необходимо ввести -f \<format\>
+
+Поддерживаемы форматы:
+- *stylish* - формат по умолчанию
+- *plain* - текстовый вывод
+- *json* - результат сравнения в формате JSON
 
 
 #### Пример работы gendiff c json
 [![asciicast](https://asciinema.org/a/RPKdGkRPwVCwYIfK.svg)](https://asciinema.org/a/RPKdGkRPwVCwYIfK)
 
+#### Пример работы gendiff c yaml
+[![asciicast](https://asciinema.org/a/zaKlsqq1TNjMDMSi.svg)](https://asciinema.org/a/zaKlsqq1TNjMDMSi)
+
+#### Пример работы gendiff c разными форматами вывода
+[![asciicast](https://asciinema.org/a/OEuKrF8fnkaKCyip.svg)](https://asciinema.org/a/OEuKrF8fnkaKCyip)
 
 ### SonarQube:
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=jeronymo42_qa-auto-engineer-python-project-241&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=jeronymo42_qa-auto-engineer-python-project-241)
