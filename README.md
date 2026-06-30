@@ -1,6 +1,9 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/jeronymo42/qa-auto-engineer-python-project-241/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/jeronymo42/qa-auto-engineer-python-project-241/actions)
 
+### Gendiff build and test status:
+[![gendiff](https://github.com/jeronymo42/qa-auto-engineer-python-project-241/actions/workflows/python-app.yml/badge.svg)](https://github.com/jeronymo42/qa-auto-engineer-python-project-241/actions/workflows/python-app.yml)
+
 ### Проект: Вычислитель отличий (QA Python)
 Проект показывает отлbчие между 2 файлами конфигураций
 
@@ -29,7 +32,6 @@
 [![asciicast](https://asciinema.org/a/OEuKrF8fnkaKCyip.svg)](https://asciinema.org/a/OEuKrF8fnkaKCyip)
 
 ### SonarQube:
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=jeronymo42_qa-auto-engineer-python-project-241&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=jeronymo42_qa-auto-engineer-python-project-241)
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=jeronymo42_qa-auto-engineer-python-project-241&metric=bugs)](https://sonarcloud.io/summary/new_code?id=jeronymo42_qa-auto-engineer-python-project-241)
 [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=jeronymo42_qa-auto-engineer-python-project-241&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=jeronymo42_qa-auto-engineer-python-project-241)
 [![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=jeronymo42_qa-auto-engineer-python-project-241&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=jeronymo42_qa-auto-engineer-python-project-241)
