@@ -1,6 +1,6 @@
 import os
 
-from gendiff import dp
+from gendiff import generate_diff as gd
 
 TEST_DATA_DIR = os.path.join(
     os.path.dirname(os.path.abspath(__file__)), "tests_data"
@@ -10,7 +10,7 @@ TEST_DATA_DIR = os.path.join(
 # json tests
 def test_generate_diff_general_json():
     assert (
-        dp(
+        gd(
             os.path.join(TEST_DATA_DIR, "file1.json"),
             os.path.join(TEST_DATA_DIR, "file2.json"),
         )
@@ -20,7 +20,7 @@ def test_generate_diff_general_json():
 
 def test_generate_diff_one_line_json():
     assert (
-        dp(
+        gd(
             os.path.join(TEST_DATA_DIR, "file_one_line_1.json"),
             os.path.join(TEST_DATA_DIR, "file_one_line_2.json"),
         )
@@ -30,7 +30,7 @@ def test_generate_diff_one_line_json():
 
 def test_generate_diff_empty_json():
     assert (
-        dp(
+        gd(
             os.path.join(TEST_DATA_DIR, "file_empty_1.json"),
             os.path.join(TEST_DATA_DIR, "file_empty_2.json"),
         )
@@ -41,7 +41,7 @@ def test_generate_diff_empty_json():
 # yaml tests
 def test_generate_diff_general_yaml():
     assert (
-        dp(
+        gd(
             os.path.join(TEST_DATA_DIR, "file1.yaml"),
             os.path.join(TEST_DATA_DIR, "file2.yaml"),
         )
@@ -51,7 +51,7 @@ def test_generate_diff_general_yaml():
 
 def test_generate_diff_one_line_yaml():
     assert (
-        dp(
+        gd(
             os.path.join(TEST_DATA_DIR, "file_one_line_1.yml"),
             os.path.join(TEST_DATA_DIR, "file_one_line_2.yml"),
         )
@@ -61,7 +61,7 @@ def test_generate_diff_one_line_yaml():
 
 def test_generate_diff_empty_yaml():
     assert (
-        dp(
+        gd(
             os.path.join(TEST_DATA_DIR, "file_empty_1.yaml"),
             os.path.join(TEST_DATA_DIR, "file_empty_2.yaml"),
         )
@@ -72,7 +72,7 @@ def test_generate_diff_empty_yaml():
 # plain tests
 def test_generate_diff_general_plain():
     assert (
-        dp(
+        gd(
             os.path.join(TEST_DATA_DIR, "file1.json"),
             os.path.join(TEST_DATA_DIR, "file2.json"),
             styler="plain",
@@ -83,7 +83,7 @@ def test_generate_diff_general_plain():
 
 def test_generate_diff_one_line_plain():
     assert (
-        dp(
+        gd(
             os.path.join(TEST_DATA_DIR, "file_one_line_1.json"),
             os.path.join(TEST_DATA_DIR, "file_one_line_2.json"),
             styler="plain",
@@ -94,7 +94,7 @@ def test_generate_diff_one_line_plain():
 
 def test_generate_diff_empty_plain():
     assert (
-        dp(
+        gd(
             os.path.join(TEST_DATA_DIR, "file_empty_1.json"),
             os.path.join(TEST_DATA_DIR, "file_empty_2.json"),
             styler="plain",
@@ -106,7 +106,7 @@ def test_generate_diff_empty_plain():
 # json tests
 def test_generate_diff_json_format_general_json():
     assert (
-        dp(
+        gd(
             os.path.join(TEST_DATA_DIR, "file1.json"),
             os.path.join(TEST_DATA_DIR, "file2.json"),
             styler="json",
@@ -117,7 +117,7 @@ def test_generate_diff_json_format_general_json():
 
 def test_generate_diff_json_format_one_line_json():
     assert (
-        dp(
+        gd(
             os.path.join(TEST_DATA_DIR, "file_one_line_1.json"),
             os.path.join(TEST_DATA_DIR, "file_one_line_2.json"),
             styler="json",
@@ -128,7 +128,7 @@ def test_generate_diff_json_format_one_line_json():
 
 def test_generate_diff_json_format_empty_json():
     assert (
-        dp(
+        gd(
             os.path.join(TEST_DATA_DIR, "file_empty_1.json"),
             os.path.join(TEST_DATA_DIR, "file_empty_2.json"),
             styler="json",
