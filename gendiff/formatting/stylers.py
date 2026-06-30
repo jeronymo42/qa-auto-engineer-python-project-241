@@ -1,4 +1,6 @@
 import json
+
+
 def stylish(diff: list) -> str:
     result = "{\n"
     change_symbols = {
