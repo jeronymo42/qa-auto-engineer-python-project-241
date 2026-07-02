@@ -27,6 +27,7 @@ jobs:
           make install
     - name: Run linter and pytest
       run: |
+          make lint
           make test
     - name: SonarCloud Scan
       uses: SonarSource/sonarcloud-github-action@master
