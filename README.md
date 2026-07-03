@@ -5,11 +5,11 @@
 [![gendiff](https://github.com/jeronymo42/qa-auto-engineer-python-project-241/actions/workflows/python-app.yml/badge.svg)](https://github.com/jeronymo42/qa-auto-engineer-python-project-241/actions/workflows/python-app.yml)
 
 ### Проект: Вычислитель отличий (QA Python)
-Проект показывает отлbчие между 2 файлами конфигураций
+Проект показывает отличия между 2 файлами конфигураций (json / yaml) в различных формах вывода.
 
 
 #### Установка
-Чтобы поиграть необходимо установить проект как пакет, для этого в консоли необходимо выполнить следующие шаги:
+Чтобы сранвить разные файлы необходимо установить проект как пакет, для этого в консоли необходимо выполнить следующие шаги:
 - make build
 - make package-install
 - ввести gendiff
